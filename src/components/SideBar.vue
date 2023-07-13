@@ -3,7 +3,7 @@
     <nav class="nav container">
       <a href="/" class="nav__logo">Mariia</a>
       <div
-        :class="`${isExpanded && 'show-menu'}`"
+        :class="`${isCollapsed && 'show-menu'}`"
         class="nav__menu"
         id="nav-menu"
       >
@@ -12,6 +12,7 @@
             class="nav__item"
             v-for="el of menu"
             :key="el.id"
+            @click="hideMenu()"
           >
             <RouterLink :to="el.path" class="nav__link">
               <i
@@ -36,7 +37,7 @@
           @click="toggleDark()"
        ></i>
         <div
-          v-if="isExpanded"
+          v-if="isCollapsed"
           class="nav__toggle"
           id="nav-toggle"
           @click="ToggleMenu()"
@@ -80,11 +81,15 @@
     },
   ]) ;
 
-  const isExpanded = ref(true);
+  const isCollapsed = ref(true);
   const ToggleMenu = () => {
-    isExpanded.value = !isExpanded.value;
+    isCollapsed.value = !isCollapsed.value;
   };
 
+  const hideMenu = function() {
+    return isCollapsed.value = true;
+
+  }
   const isDark = useDark({
   onChanged(isDark) {
     if (isDark) {

@@ -81,37 +81,31 @@ import {ref} from "vue";
   }
 </script>
 
-<style>
+<style scoped>
 .portfolio__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  margin-top: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2.5rem;
+  margin-top: 1.5px;
   justify-content: space-around;
 }
-
 .portfolio__content {
-  border-radius: 10px;
+  border-radius: .75rem;
   position: relative;
   overflow: hidden;
   transition: all 0.5s;
 }
-
 .portfolio__img {
   width: 100%;
-  border-radius: 10px;
   display: block;
 }
-
 .portfolio__content:hover img {
   filter: blur(.5rem);
 }
-
 .portfolio__data {
   width: 100%;
   height: 0;
   background: var(--background-color);
-  border-radius: 10px;
   position: absolute;
   left: 0;
   top: 0;
@@ -121,20 +115,17 @@ import {ref} from "vue";
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 2.5rem;
   transition: height 0.5s;
 }
-
 .portfolio__content:hover .portfolio__data {
   height: 100%;
 }
-
 .portfolio__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
   color: var(--container-color);
 }
-
 .portfolio__description {
   margin-bottom: var(--mb-0-75);
   color: var(--container-color);
@@ -144,11 +135,11 @@ import {ref} from "vue";
   margin: 2rem auto 0;
   padding: 0;
   font-size: var(--h2-font-size);
-  line-height: 40px;
+  line-height: 2.5rem;
   color: var(--first-color);
   background: var(--container-color);
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   text-align: center;
   align-items: center;
