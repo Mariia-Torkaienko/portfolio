@@ -24,10 +24,10 @@
           </li>
         </ul>
         <div class="about__buttons">
-          <a download="" href="" class="button button--flex">
+          <button @click="downloadFile()" class="button button--flex btn">
             My resume
             <i class="uil uil-file-download button__icon"></i>
-          </a>
+          </button>
         </div>
       </div>
       
@@ -48,6 +48,13 @@
   </section>
 </template>
 <script setup lang="ts">
+  const downloadFile = () => {
+    const link = document.createElement('a');
+      link.href = 'src/assets/PDF/Mariia_Torkaienko.pdf';
+      link.setAttribute('download', 'Mariia_Torkaienko.pdf');
+      document.body.appendChild(link);
+      link.click();
+    }
 </script>
 <style scoped>
 .section__title {
@@ -84,5 +91,8 @@
 }
 .about__description {
   margin-top: 1.75rem;
+}
+.btn {
+  border: none;
 }
 </style>
