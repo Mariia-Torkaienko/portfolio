@@ -1,6 +1,6 @@
-# portfolio
+## portfolio
 
-[DEMO LINK](https://mariia-torkaienko.github.io/portfolio/)
+[PORTFOLIO DEMO LINK](https://mariia-torkaienko.github.io/portfolio/)
 
 ## Recommended IDE Setup
 
